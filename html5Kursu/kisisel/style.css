@@ -1,0 +1,193 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#sayfa{
+    width: 900px;
+    border-style: solid;
+    border-width: 1px;
+    min-height: 600px;
+    margin: auto;
+
+}
+
+/*Banner için css kodları*/
+#banner{
+    width: 899px;
+    height: 100px;
+    border-style: none;
+    border-width: 1px;
+    background-color: white;
+    margin: auto;
+}
+
+/*Logo için css kodları*/
+#logo{
+    width: 100px;
+    height: 80px;
+    border-style: none;
+    border-width: 1px;
+    background-color: white;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    float: left;
+}
+
+/*Sosyal medya ikonları*/
+#sosyal{
+    width: 180px;
+    height: 40px;
+    border-style: none;
+    border-width: 1px;
+    background-color: white;
+    float: right;
+    position: relative;
+    top: 50px;
+    right: 10px;
+}
+
+#ikon{
+    float: right;
+    margin-left: 10px;
+}
+
+/*Anamenü*/
+#anamenu{
+    width: 899px;
+    height: 50px;
+    border-style: dotted;
+    border-width: 1px;
+    background-color: deepskyblue;
+    margin: auto;
+}
+
+/*Anamenü içinde ul tagı için css*/
+#anamenu ul{
+    list-style-type: none; /*madde imlecini kaldırır*/   
+}
+
+/*Anamenü içerisinde ul tagı içindeki li tagı için css*/
+#anamenu ul li{
+    border-style: solid;
+    border-width: 3px;
+    width: 200px;
+    border-radius: 5px;
+    border-color: blue;
+    background-color: white;
+    float: left;
+    padding: 5px;
+    margin-left: 5px;
+    position: relative;
+    top: 10px;
+    text-align: center;
+}
+
+/*id'si anamenü olan, ul içerisinde bulunan a etiketi için css kodu*/
+#anamenu ul a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*id'si anamenü olan, ul tagının içerisindeki a link durumu için css kodu*/
+#anamenu ul a:link{
+    color: blue;
+}
+
+/*id'si anamenü olan ul tagının içerisindeki ziyaret edilmiş linkler*/
+#anamenu ul a:visited{
+    color: brown;
+}
+
+/*id'si anamenü olan ul tagının içerisinde farenin üstüne geldiği linkler*/
+#anamenu ul a:hover{
+    color: grey;
+    text-decoration: underline;
+}
+
+/*id'si anamenü olan ul tagının içerisinde tıklanan linkler*/
+#anamenü ul a:active{
+    color: red;
+}
+
+/*İçerik ve Yan menü kodları*/
+
+#icerik{
+    width: 598px;
+    min-height: 400px;
+    border-style: none;
+    border-width: 1px;
+    background-color: white;
+    float: left;
+    overflow: auto;
+}
+
+#yanmenu{
+    width: 302px;
+    min-height: 400px;
+    border-style: none;
+    border-width: px;
+    background-color: royalblue;
+    float: left;
+    overflow: auto;
+}
+
+/*İçerik resmi için css kodu*/
+.resim{
+    float: left;
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+}
+
+/*Paragraf metinleri için css kodu*/
+.metin{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: blue;
+}
+
+/*h1 etiketi için css kodu*/
+.baslik{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: red;
+    font-weight: bolder;
+}
+
+/*Alt menü*/
+#altmenu{
+    width: 900px;
+    height: 50px;
+    border-style: none;
+    border-width: 1px;
+    background-color: aqua;
+    float: left;
+    text-align: center;
+    color: black;
+}
+
+/*Id'si altmenu olan a tagıyla ilgili css*/
+#altmenu a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: bolder;
+    color: black;
+    text-decoration: none;
+}
+
+#altmenu a:hover{
+    color: grey;
+    text-decoration: underline;
+}
+
+#altmenu a:active{
+    color: red;
+}
+
+.kucukmetin{
+    font-size: 10px;
+}

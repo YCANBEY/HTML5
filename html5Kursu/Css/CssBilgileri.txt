@@ -1,0 +1,219 @@
+CSS Yazım Kuralları
+- CSS komutları 3 parçadan oluşur. Bunlar:
+    Html Komutu:(Selector)
+    Özellik(Property)
+    Değer(Value)
+- CSS kodlarındaki okunabilirliği arttırmak için genelde her özellik alt alta yazılır.
+- CSS kodları yazarken gruplama yöntemini kullanabilirsiniz.
+- Yazmak istediğiniz CSS kodunu sadece belli bir id değerine sahip HTML komutuna uygulamak istiyorsanız söz dizimi:
+    #id-değeri
+    {
+     css kodu1;
+     css kodu2;
+    }
+- CSS kodlarını birden fazla HTML komutuna uygulamak isterseniz CSS kodlarına bir isim verip class özelliği uygularsınız.
+- Eğer CSS kodları içine açıklama metinleri eklemek istiyorsanız aşağıdaki sözdizimini kullanabilirsiniz.
+    /*Açıklama metni*/
+
+
+CSS Kodları Nereye Yazılır?
+- CSS kodlarını 3 farklı yere yazabilirsiniz:
+    1) HTML tagının içine(inline)
+    2) Sayfanın head bölümüne(internal)
+    3) Bir dosyaya(external)
+
+Harici CSS Kodları
+- CSS kodları metin tabanlı bir dosya içine yazılır ve ihtiyaç duyulan her sayfaya bağlanır(link).
+    - <link rel="stylesheet" href="still.css"type="text/css"/>
+
+Hangi CSS Kodu Önceliklidir ?
+- HTML komutuna daha yakın olan CSS kodu önceliklidir.
+    1) body içindeki css kodu daha önceliklidir. (Satır içi)
+    2) head bölümündeki css kodu 2. sırada önemlidir.(Sayfa içi)
+    3) css dosyasındaki css kodu 3. sırada önemlidir.(Harici)
+
+Seçici İşlemleri
+- Neyi seçerseniz onunla ilgili işlem yaparsınız.
+- CSS kodu uygulayacaksanız, öncelikle HTML elemanını seçmeniz gerekir.
+- İşte bu aşamada selector ya da seçici dediğimiz kodlar devreye girmektedir.
+
+Temel Seçici Örnekleri
+* : Her şey seçilecek
+p : p tagı seçilecek
+#ilk : id değeri #ilk olan seçilecek.
+.son : class değeri .son olan seçilecek.
+h1.egik : class değeri .egik olan h1 etiketleri seçilecek.
+p strong : p tagı içindeki tüm strong tagları seçilecek.
+nav #buton : nav tagı içinde id değeri #buton tüm elemanlar seçilecek.
+h1,h2,h3,h4,h5,h6 : h1-h6 arası tüm taglar seçilecek.
+
+
+Karmaşık Seçici Örnekleri
+.banner p : class değeri banner olan eleman içindeki p tagı seçilecek.
+div>p : ebeveyni div olan tüm p tagları seçilecek.
+.menu ul li : class değeri menu olan eleman içinde bulunan ul tagının içindeki li tagını seç.
+nav.menu li : nav tagı içinde bulunan ve class değeri menu olan eleman içindeki li tagı seçilecek.
+body>p:first-child : body tagı içindeki ilk paragraf(ilk çocuk eleman).
+body>p:last-child : body tagı içindeki son paragraf(son çocuk eleman).
+:active : aktif elemanı seç.
+:after : sonraki elemanı seç.
+
+
+Link ve Özellik Seçiciler
+a:link : henüz ziyaret edilmemiş linkleri seçer.
+a:visited : ziyaret edilmiş linkleri seçer.
+a:focus : klavye ile etkinleştirilmiş linkleri seçer.
+a:hover : üzerinde fare olan linkleri seçer.
+input[type] : <input> içinde type özelliğine sahip olanları seçer.
+input[type="text"] : <input> içinde type özelliği text olanları seçer.
+img[title="kedi"] : <img> tagındaki title özelliği kedi olanları seçer.
+
+
+
+CSS Kutu Modeli
+- CSS'e birer kutu gibi görünen HTML komutları içerik, iç-aralık(padding),
+kenarlık ve dış-aralıktan(margin) oluşmaktadır.
+
+Block ve Inline komutlar
+- Kutu modelinde bazı HTML komutları block, bazıları HTML ise inline olarak çalışır.
+- Block olarak çalışan hx,table veya p gibi komutlar sayfanın solundan sağına kadar bulundukları tüm satırı kaplarken,
+inline olarak çalışan a, b, em veya img gibi komutlar sadece bulundukları alanı kaplar.
+
+
+Kutu Ardalanı
+- Ardalanını değiştirmek için background özelliği kullanılır. Ayrıca, aşağıdaki özellikleri de kullanabilirsiniz:
+    background-color
+    background-image
+    background-size
+
+Ardalan Konumu
+- Ardalan resminin konumunu belirlemek için aşağıdaki özellikler kullanılır:
+    background-repeat
+    background-position
+    background-attachment
+
+Kutu Konumu
+- Kutuların sayfada bulundukları yeri belirlemek için position özelliği kullanılır.
+    
+    position:static; : Her kutunun varsayılan değeridir. Static değere sahip kutular nereye konulduysa orada bulunurlar.
+    Kutuların varsayılan değeridir.
+
+    position:relative; : Kutunun bulunduğu konuma göre taşınmasını sağlar.
+
+    position:fixed; : Kutunun sayfaya göre ayarlanmasını sağlar.
+
+    position:absolute; : Başka kutu içinde bulunan kutuları kontrol etmek için kullanılır. İçinde bulunduğu kutuya göre üstten,
+    alttan ve soldan mesafeler verilerek kutunn konumu ayarlanır.
+
+Kutuların Öne-Arkaya Alınması
+- Kutuların öne veya arkaya taşınması için z-index özelliği kullanılır.
+- Daha yüksek z-index değerine sahip olan daha önde görünür.
+
+Kutuların Köşelerinin Yuvarlatılması
+- Kutu kenarlarını yuvarlatmak için border-radius özelliği kullanılır.
+
+Kutu İçeriğinin Taşması 
+- Eğer küçük bir kutunuz varsa ve içine alabileceğinden daha fazla içerik koyarsanız adına overflow/taşma denilen olay meydana gelir.
+- overflow özelliği ile taşan içeriğin durumu belirlenebilir.
+
+    overflow:visible; : Varsayılan olarak bu değer kullanılır. Eğer içerik kutu içine sığmazsa taşan kısım
+    alttan devam eder ve ziyaretçiye gösterilir.
+
+    overflow:hidden; : İçerik kutu içine sığmazsa taşan kısım ziyaretçiye gösterilmez.
+
+    overflow:scroll; : İçerik kutu içine sığmazsa taşan kısım ziyaretçiye gösterilmez ama bir kaydırma çubuğu ile
+    taşan içeriğin görüntülenmesi sağlanır.
+
+    overflow:auto; : Eğer taşma olursa kaydırma çubuğu gösterilir ve taşan içerik kaydırma çubuğu ile görüntülenebilir.
+
+Kutuya Gölge Oluşturma
+- Kutuya gölge yapmak için box-shadow özelliği kullanılır.
+    none : Varsayılan değerdir. Gölge olmamasını sağlar.
+    h-shadow : Gölgenin yatay boyutu.
+    v-shadow : Gölgenin dikey boyutu.
+    blur : Gölgenin kenarını belirlenen boyutta yumuşatır.
+    spread : Gölgenin tüm yönlerde genişlemesini sağlar.
+    color : Gölge rengi.
+    inset : Gölgeyi nesnenin iç tarafına yapar.
+
+Kutuların Yaslanması(Float)
+- Kutunun sola veya sağa yaslanması için float özelliği kullanılır.
+- Diğer kutular float özelliği ile yaslanan kutunun etrafını sararlar.
+- Eğer nesnelerin kutu etrafını sarmasını istemiyorsanız clear özelliğini kullanırsınız.
+    <style>
+      img{float:left;
+      margin:15px
+      }
+    </style>
+
+
+Paragraf Özellikleri
+- text-indent : Paragrafın ilk satırdaki girintisini ayarlar.
+- text-align : Paragrafın sola, sağa, ortaya veya her iki kenara yaslanmasını sağlar.
+- line-height : Paragraftaki satırlar arasındaki mesafeyi ayarlar.
+
+
+Yazı Tipi Özellikleri
+    Font-family : Yazı tipi
+    color : Metin rengini değiştirir.
+    font-size : Metin boyutunu değiştirir. 1em 16px
+    font-weight : Metinlerin daha ince, normal ya da kalın gösterir.
+    font-style : Metinlerin normal ya da eğik görünmesini sağlar.
+    font-variant : Metinlerin küçük harf boyutlarında ama büyük harf karakterleri ile görünmesini sağlar.
+    text-transform : Metinleri büyük harfe veya küçük harfe çevirmeye yarar.
+    text-decoration : Metinlerin altını, üstünü veya üzerini çizmek için kullanılır.
+    letter-spacing : Harfler arasındaki mesafeyi ayarlar.
+    word-spacing : Kelimeler arasındaki mesafeyi ayarlar.
+
+
+Listelerin Biçimlendirilmesi
+- Madde imlerini değiştirmek için list-style-type özelliği kullanılır.
+    none (madde imi yok)
+    disk (daire)
+    circle (çember)
+    square (kare)
+    decimal (numara)
+    lower-alpha (küçük harf a, b, c)
+    lower-greek (yunanca küçük harf)
+    lower-latin (latince küçük harf a, b, c)
+    lower-roman (küçük roma rakamı i, ii, iii, iv)
+    upper-alpha (büyük harf A, B, C)
+    upper-greak (yunanca büyük harf)
+    upper-latin (latince büyük harf A, B, C)
+    upper-roman (büyük roma rakamı I, II, III, IV)
+    url("resim") (madde imi yerine resim görüntülenir.)
+
+
+Tablo Biçimlendirme 
+- Tablo biçimlendirmede table, tr, td, th, caption, thead, tbody, ve tfoot
+etiketlerine ayrı ayrı CSS kodları uygulanabilir.
+- Hücre içindeki metinleri hizalamak için aşağıdaki özellikler kullanılır:
+    text-align
+    vertical-align
+
+- Eğer iki-çizgi şeklinde görünen kenarlıkları tek çizgiye dönüştürmek istiyorsanız:
+    border-collapse:collapse; komutunu kullanmalısınız.
+
+- Tablo veya hücrelere ardalan için:
+    background-color
+    background-image
+
+
+Formların Biçimlendirilmesi
+- Form elemanları kutular gibi biçimlendirilir.
+- Form elemanın içi ve kenarları biçimlendirilebilir.
+- Form elemanlarının içindeki metinler biçimlendirilebilir.
+- Formlardaki onay ve iptal butonları biçimlendirilebilir.
+
+
+Linklerin Biçimlendirilmesi
+- Linkler metinler gibi biçimlendirilebilir.
+- Linklerin farklı durumları için aşağıdaki özellikler kullanılır:
+    a:link (ziyaret edilmemiş link)
+    a:visited (ziyaret edilmiş link)
+    a:hover (fare link üzerinde)
+    a:active (fare tıkladığında)
+
+Menü Oluşturma ve Biçimlendirme
+- Menüler listelerden oluşturulur.
+- Menülerin biçimlendirilmesi CSS Kutu Modeli'nde öğrendiğimiz komutlarla yapılır.

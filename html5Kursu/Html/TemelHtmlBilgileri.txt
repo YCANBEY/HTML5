@@ -1,0 +1,250 @@
+<!DOCTYPE html> : Sayfanın HTML5 ile tasarlandığını belirtir. Sayfanın en başında bulunur.
+
+<html></html> : Sayfanın başlangıcını ve sonunu belirtir.
+
+<head></head> : Sunucu ve arama motorları ile ilgili bilgileri içerir.
+
+<body></body> : Ziyaretçiye gösterilecek içeriği barındırır.
+
+<title></title> : Sayfa ile ilgili açıklama barındırır. Sayfa açıldığında tarayıcı sekmesinde görünür.
+
+<html lang:"tr"> : Sayfanın dilini belirtir. Türkçe sayfalarda "tr" kullanılırken, İngilizce sayfalarda "en" kullanılır. <html> tagının bir özelliğidir.
+Yani, ayrı bir komut değildir.
+
+<meta charset="utf-8"> : Türkçe karakterlerin düzgün görünmesini sağlar. <head> tagı içine yazılmalıdır.
+
+<hx></hx> : İçeriklerin başlık bilgisini barındırır. Gazetelerdeki metinlerin manşetleri gibi, başlık tagları da web sayfalarındaki metinlerin manşetleridir.
+Okuyucuların dikkatini çekmek için kullanılır. Başlık tagları büyükten küçüğe doğru h1, h2, h3, h4, h5 ve h6 şeklinde kullanılabilir.
+
+<p></p> : Paragraf.
+
+<br/> : Aynı paragrafın alt satırına geçmenizi sağlar.
+
+id ; benzersiz isim ; <h1 id= "baslik1">...</h1> : HTML tagına benzersiz bir isim verir. Tek bir etikete tek bir isimle uygulanır.
+
+class ; css sınıf adı ; <h2 class= "çerçeve">...</h2> : HTML komutuna belirli bir ada sahip CSS kodu uygular. Birden fazla etikete kullanılabilir.
+
+style; css komutu ; <h1 style="color:red">...</h1> : HTML komutu içinde CSS kodu yazılmasını sağlar.
+
+title ; metin ; <h1 title="Makale Başlığı">...</h1> : HTML komutu üzerine gidince bir kutu içinde açıklama metni görünmesini sağlar.
+
+
+Description(Sayfa Açıklaması)
+- Arama motorları açısından önemli etiketlerden biri de <meta> etiketidir.
+- <meta> etiketinin içine <title> etiketi ile ilişkili olarak yazılan açıklama sayfanızın daha üstte görünmesini sağlar.
+
+Keywords(Anahtar Kelimeler)
+- <meta> etiketi içinde keywords ile listelenen kelimeler arama
+sonuçlarında daha üstte görünür.
+- Anahtar kelimelerde en fazla 60 karakter kullanılmalıdır.
+
+Bunları head tagının içinde yazmak bize google aramalarında avantaj sağlar. Sayfa açıklamasını aramalara uygun yazmalıyız,
+aynı şekilde anahtar kelimeleri de seçerken dikkat etmemiz gereken kural; arama yaparken kullanılan kelimeler ve bizim
+ürünümüze uygun kelimeleri seçmeliyiz.
+
+
+Semantik (Anlamsal) Web Nedir ?
+- Kelimelerin anlamlarını inceleyen bilim dalına Semantik denir.
+- Semantik web, diğer anlamı ile anlamsal ağ, uygun içerikleri uygun HTML komutlarının içine koymak anlamına gelir.
+- Google ve Yaani gibi arama motorları semantik web sayesinde arama yapan kullanıcılara en uygun içeriği sağlar.
+- <form>, <table>, <head> ve footer gibi HTML komutları semantiktir çünkü komutun adından hem anlamı hem de işlevi ortaya çıkar.
+- <span> ve <div> gibi komutlar ise semantik değildir. Sonuçta, arama motorları açısından daha zor anlaşılan içerikler sunarlar.
+- Semantik olarak tasarlanan sayfa içerikleri arama sonuçlarında daha üstte görünürler.
+- Bu nedenle, genel sayfa yapısını tasarlarken aşağıdaki semantik web etiketleri ihmal edilmemeli ve içeriğie uygun olarak kullanılmalıdır:
+    - article
+    - section
+    - header
+    - nav
+    - aside
+    - footer
+
+
+<article> : Yorum, haber, forum gönderisi, blog gönderisi, müzik veya video gibi içerikleri kapsar.
+<section> : Genelde benzer konuya sahip birden fazla <article> etiketini barındırır.
+<header> : Bir sayfanın, makalenin veya bölümün başlık bilgisini kapsar.
+<nav> : Sayfa içine veya sayfa dışına link vermek için oluşturulan menüleri kapsar.
+<aside> : Sayfaların sol ya da sağ kenarında bulunan menü v.b. içerikleri barındıran bölümdür.
+<footer> : Herhangi bir sayfanın, makalenin, bölümün veya menünün en altında bulunur ve genelde en yakın içeriğin iletişim
+ve telif hakkı bilgilerini barındırır.
+<figure> Fotoğraf, şekil, illüstrasyon gibi içerikleri ve bu içeriklerle ilgili başlık bilgisini barındrırır.
+
+
+Metin Biçimlendirme
+- HTML4 ve önceki sürümlerde metin biçimlendirme HTML komutları ile yapılıyorken, HTML5 sürümünde CSS kodları kullanılır.
+- Bununla birlikte aşağıdaki etiketlerle temel biçimlendirme işlemleri yapılabilir:
+    - <b> ve <strong> etiketi metni kalınlaştırır. <strong> etiketi semantiktir.
+    - <i> ve <em> etiketi metni eğer(italik etiketi) <em> etiketi semantiktir.
+    - <u> etiketi metnin altına çizgi koyar
+    - <mark> etiketi metni vurgular, fosforlu kalemle çizilmiş gibi yapar.
+    - <sub> ve <sup> etiketleri içeriği alt ve üst simge yapar.
+    - <code> etiketi metinleri Courier fontu ile farklı gösterir.
+    - <pre> etiketi kodları tarayıcıda yazıldığı gibi gösterir.
+
+
+Span komutu
+- Bazen belli bir etiket içinde olmayan metinlere CSS veya Javascript komutu uygulamak isteriz.
+- Bu durumda metin <span> etiketi içine alınır ve id veya class gibi özellikleri kullanılarak CSS kodu uygulanır.
+Örneğin:
+<p id="par2" class="bicim2" style="color:blue">
+    <span class="mor">HTML4</span> sürümünde paragrafların
+    fontunu, boyutunu, rengini HTML komutları değiştirir.
+</p>
+
+
+
+Liste oluşturma
+- HTML sayfalarında liste oluşturmak için <ol> ve <ul> tagları kullanılır.
+- <ol> tagı ordered list kelimelerinin kısaltılmışıdır ve numaralı liste oluşturmak için kullanılırken,
+<ul> tagı unordered list kelimelerinin kısaltılmışıdır ve madde imli liste oluşturmak için kullanılır.
+- Listedeki her bir elemanı göstermek için <li> tagı kullanılmaktadır.
+- Liste sırası 1 den başlar fakat <ol start="3"> dersek 3. sıradan başlar.
+- Sıralama ters olsun istersek reversed yazabiliriz.
+- Eğer rakam yerine harf veya roma rakamı kullanmak istersek type özelliğini kullanırız.
+
+
+
+
+Resimlerin Sayfaya Yerleştirilmesi
+- Sayfanızda veya sitenizde kullanmak istediğiniz resimleri öncelikle uygun bir klasöre koyun.
+- Bir resmin web sayfasına eklenmesi için <img> tagı kullanılır.
+    <img> tagının src özelliği ile resmin adı ve adresi belirtilir.
+- Siteniz bittikten sonra resimleri de sunucuya göndermeyi unutmayın.
+
+    Örnek:
+    <body>
+        <h1>Ayyıldız</h1>
+        <img src="ayyildiz.jpg"/>
+        <br>
+        <img src="resimler/ayyildiz.jpg"/>
+    </body>
+
+
+Resim Özellikleri
+- Sayfaya eklenen resmin bazı özelliklerini değiştirmek için <img> tagının alt, title, width ve 
+height gibi özellikleri kullanılır.
+    alt: açıklama (resim olmazsa görünür)
+    title: başlık(resmin üzerine gidince görünür)
+    width: genişlik
+    height: yükseklik
+
+Favicon
+- Favicon resimleri, web sayfalarımızın en üstündeki sekmede görülen 16x16 piksel boyutundaki ICO formatlı resimlerdir.
+- Kodların <head> bölümüne yazıldığını gözden kaçırmayın.
+
+Örneğin:
+    <head>
+        <meta charset="utf-8">
+        <title>Favicon Kullanımı</title>
+        <link rel="shortcut icon" href="favicon.ico"/>
+    </head>
+
+
+
+Link Oluşturma
+- Herhangi bir metne, resme veya video gibi bir nesneye link atamak isterseniz aşağıdaki gibi bir kod kullanabilirsiniz.
+    <a href="hedef adres">nesne</a>
+    <a href="#">boş link</a>
+    <a href="ust">Sayfa Başı</a>
+    <a href="index.html">Anasayfa</a>
+    <a href="http://www.site.com">Git</a>
+    <a href="dosya.rar">indir</a>
+
+
+
+Sayfa Başı Link Uygulaması
+- Ziyaretçiyi sayfa başına göndermek için <body> etiketini aşağıdaki gibi değiştirin:
+    <body id="ust">
+- Sayfanın en altına </body> etiketinin üstüne aşağıdaki kodu yazın:
+    <a href="#ust">Sayfa Başına Git...</a>
+
+- Eğer oluşturduğunuz linki başka bir sekmede açmak isterseniz target özelliğinin blank komutunu kullanmalısınız.
+Örneğin:
+    <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+
+
+
+
+Tablo Oluşturma
+- Tablolar basitçe satır ve sütunlardan oluşur.Satır ve sütunların kesiştiği yerde adına hücre denilen kutucuklar oluşur.
+- <tr> etiketi satırları, <td> etiketi sütunları oluşturur.
+Örneğin:
+    <table>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+    <table>
+
+Tablo Biçimlendirme
+- Bu kod tablonun başlığını  verir.
+    <caption>Ülke Nüfusları</caption> 
+
+- Bu kodu tablonun ilk satırı olarak düşünebiliriz.
+    <thead>
+        <tr><th><b>Ülke</b></th><th><b>Nüfus</b></th></tr>
+    </thead> 
+
+- Bu kodu tablonun gövdesi olarak düşünebiliriz.
+    <tbody>
+        <tr><td>Türkiye</td><td>77000000</td></tr>
+        <tr><td>Bulgaristan</td><td>70000000</td></tr>
+    </tboydy>
+
+- Bu kodu tablonun son satırı olarak düşünebiliriz.
+    <tfoot>
+        <tr><td></td><td>Toplam:960000000</td></tr>
+    </tfoot>
+
+Hücre Birleştirme
+- colspan: satırlardaki hücreleri birleştirir.
+- rowspan: sütunlardaki hücreleri birleştirir.
+    <tr><td colspan="2">Ülke Bilgileri</td></tr>
+    
+
+
+Form Oluşturma
+- Form oluşturmak için <form> tagı kullanılır.
+- Forma isim vermek için name, forma girilen verilerin hangi sayfaya gönderileceğini belirlemek için action, verilerin
+hedef sayfaya gönderilme yöntemini belirlemek için ise method özelliği kullanılır.
+Örnek kod:
+    <body>
+        <form name="email" action="mail.php" method="get">
+        </form>
+    </body>
+
+- Forma girilen verilerin onaylanması ve action ile belirlenen sayfaya gönderilmesi için onay(submit) butonu,
+formun temizlenmesi için ise iptal(reset) butonu kullanılır.
+- Form elemanlarının düzenli görülmesi için tablo veya css kullanabilirsiniz.
+- Metin kutusu tek satırlık veri girişi için kullanılırken, metin alanı çok satırlı veri girişi için kullanılır.
+
+
+
+Onay Kutusu(Checkbox)
+- Ziyaretçiden Evet/Hayır, Doğru/Yanlış, Onayla/Onaylama gibi cevaplar girmesini istiyorsanız Checkbox kullanırsınız.
+- Formdaki onay kutularının name özelliği farklı olmalıdır.
+
+Seçenek Kutusu(Radio)
+- Ziyaretçilerin iki veya daha fazla seçenek arasından sadece bir tanesinin seçilmesini istiyorsanız seçenek kutusu (radio) kullanılır.
+- Aynı gruptaki onay kutularının name özelliği aynı olmalıdır.
+
+Seçenek Listesi(Combobox)
+- Eğer seçenek sayısı çok fazla ise Seçenek Listesi kullanılır. Örneğin, ziyaretçinin doğduğu ili soruyorsanız 81 tane seçenek olmalıdır.
+
+
+
+Video Etiketinin Özellikleri
+- <video> etiketinde sıkça kullanılan özellikler:
+    src: Video adresi
+    height: Video genişliği
+    width: Video yüksekliği
+    autoplay: Sayfa açıldığında video oynamaya başlar.
+    controls: Kontrol düğmelerinin görünmesini sağlar.
+    loop: Videonun sürekli oynamasını sağlar.
+    preload: Play düğmesine basmadan, sayfa açıldığında video indirilmeye başlanır.
+    muted: Videonun sesi kısılmış halde başlamasını sağlar.
+
+- Ses dosyalarında <video> etiketinin yerini <audio> etiketi alır.
+
+
+
+
+
